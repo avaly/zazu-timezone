@@ -1,6 +1,7 @@
+const zazu = require('../zazu.json');
+
 describe('zazu.json', () => {
   it('is valid', () => {
-    const zazu = require('../zazu.json');
     expect(zazu).toBeDefined();
     expect(zazu.name).toEqual('zazu-timezone');
     expect(zazu.blocks).toBeDefined();
