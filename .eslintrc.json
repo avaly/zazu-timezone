@@ -1,0 +1,12 @@
+{
+    "extends": ["standard"],
+    "rules": {
+      "comma-dangle": [2, "always-multiline"],
+      "semi": [2, "always"]
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "jest": true
+    }
+}

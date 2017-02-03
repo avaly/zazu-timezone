@@ -1,0 +1,20 @@
+{
+  "name": "zazu-timezone",
+  "version": "1.0.0",
+  "description": "Zazu timezone.",
+  "main": "zazu.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "license": "Unlicense",
+  "devDependencies": {
+    "eslint": "^3.13.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "jest": "^18.1.0"
+  },
+  "jest": {
+  }
+}
