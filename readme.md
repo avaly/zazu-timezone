@@ -1,6 +1,6 @@
 ## Zazu Timezone
 
-A simple [zazu](http://zazuapp.org/) plugin which tells what time it is in another timezone.
+<img src="docs/timezone.svg" width="32" /> A simple [zazu](http://zazuapp.org/) plugin which tells what time it is in another timezone.
 
 ### Usage
 
@@ -28,3 +28,7 @@ Add `avaly/zazu-timezone` inside of `plugins` block of your `~/.zazurc.json` fil
 ![](docs/screenshot-input.png)
 
 ![](docs/screenshot-notification.png)
+
+### Credits:
+
+Logo made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
