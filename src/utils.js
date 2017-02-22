@@ -21,23 +21,24 @@ const fillTimezonesByOffset = () => {
 
 fillTimezonesByOffset();
 
-const findTZFromQuery = (query) => {
-  if (TIMEZONE_OFFSETS.includes(query)) {
-    return TIMEZONES_BY_OFFSET[query][0];
-  }
+const findTZFromQuery = (originalQuery) => {
+  const query = originalQuery.replace(/^(in)?\s*/i, '');
+
   if (TIMEZONE_OFFSET[query]) {
     return TIMEZONES_BY_OFFSET[TIMEZONE_OFFSET[query]][0];
   }
 
-  let offset;
-  const match = query.match(/^([-+])?(\d{1,2})(:\d{2})?$/);
+  const match = query.match(/^(?:utc|gmt)?([-+])?(\d{1,2})(:\d{2})?$/i);
   if (match) {
-    offset = (match[1] || '+') +
-      padLeft(match[2], 2, '0') +
-      (match[3] || ':00');
-  }
-  if (TIMEZONE_OFFSETS.includes(offset)) {
-    return TIMEZONES_BY_OFFSET[offset][0];
+    const sign = match[1];
+    const hour = match[2];
+    const minute = match[3];
+
+    const offset = (sign || '+') + padLeft(hour, 2, '0') + (minute || ':00');
+
+    if (TIMEZONE_OFFSETS.includes(offset)) {
+      return TIMEZONES_BY_OFFSET[offset][0];
+    }
   }
 
   return null;

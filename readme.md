@@ -1,6 +1,6 @@
 ## Zazu Timezone
 
-<img src="docs/timezone.svg" width="32" /> A simple [zazu](http://zazuapp.org/) plugin which tells what time it is in another timezone.
+A simple [zazu](http://zazuapp.org/) plugin which tells what time it is in another timezone.
 
 ### Usage
 
@@ -10,6 +10,8 @@ Use the prefix `time` together with an identifier for a timezone:
 - `time -5`
 - `time CET`
 - `time MST`
+- `time UTC-5`
+- `time in MST`
 
 ### Install
 
